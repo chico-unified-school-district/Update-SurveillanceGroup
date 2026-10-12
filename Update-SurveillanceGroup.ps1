@@ -22,7 +22,7 @@ function Get-GroupMembers( [pscredential]$cred) {
   Write-Host ('Querying {0}' -f $groupName) -Fore Cyan
   try {
    Get-ADGroupMember -Identity $groupName -Recursive -ErrorAction Stop -Credential $cred |
-    Where-Object { $_.objectClass -eq 'user' } | ForEach-Object { Get-ADUser -Identity $_.ObjectGUID }
+    Where-Object { $_.objectClass -eq 'user' } | ForEach-Object { Get-ADUser -Identity $_.ObjectGUID -Credential $cred }
   }
   catch {
    Write-Host ('Error querying {0}: {1}' -f $groupName, $_.Exception.Message) -Fore Red
