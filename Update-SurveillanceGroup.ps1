@@ -118,6 +118,7 @@ Show-BlockInfo main
 
 Show-BlockInfo "Process started $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
 if ($WhatIf) { Show-TestRun }
+Disconnect-ExchangeOnline -Confirm:$false
 Connect-ExchangeOnline -Credential $O365Credential -ShowBanner:$false
 
 Update-GroupMembers
