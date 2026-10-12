@@ -7,7 +7,6 @@ param (
  [Parameter(Mandatory = $True)][PSCredential]$O365Credential,
  [Parameter(Mandatory = $True)][PSCredential]$ADCredential,
  [Parameter(Mandatory = $True)][string]$DistributionGroup,
- # [Parameter(Mandatory = $True)][ValidateScript({ Test-Path $_ })][string]$CsvPath,
  [Parameter(Mandatory = $True)][string[]]$ADGroup,
  [Parameter(Mandatory = $False)][switch]$ClearExisting,
  [Alias('wi')][switch]$WhatIf
