@@ -31,8 +31,8 @@ $o365Credential = Get-Credential
 $params = @{
     ADCredential      = $adCredential
     O365Credential    = $o365Credential
-    DistributionGroup = 'surveillanceusers@chicousd.onmicrosoft.com'
-    ADGroup           = @('BJ-Surveillance-Record', 'CH-Surveillance-Record')
+    DistributionGroup = 'surveillance@onmicrosoft.com'
+    ADGroup           = @('Site1-Surveillance-Record', 'Site2-Surveillance-Record')
     WhatIf            = $true
 }
 
